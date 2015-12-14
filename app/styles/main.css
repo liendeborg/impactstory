@@ -28,3 +28,9 @@ body {
     border-top: 1px solid #e0e0e0;
 }
 
+.logic-model {
+  padding: 0px;
+}
+column {
+  border-left: 1px solid #ccc;
+}
