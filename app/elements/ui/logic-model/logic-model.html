@@ -11,16 +11,149 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <dom-module id="logic-model">
   <template>
-    <style>
+    <style is="custom-style"> 
       :host {
         display: block;
       }
+      .logic-model {
+        
+      }
+      @media screen and (min-width: 1024px) {
+        .logic-model {
+          
+        }
+        .logic-model > logic-outcomes,
+        .logic-model > logic-outputs,
+        .logic-model > logic-activities,
+        .logic-model > logic-inputs {
+
+        }
+        logic-outcomes,
+        logic-outputs,
+        logic-activities {
+          /*border-left: 0.1rem solid #ccc;*/
+        }
+      }
+      
     </style>
-    <ul>
-      <template is="dom-repeat" items="{{items}}">
-        <li><span class="paper-font-body1">{{item}}</span></li>
-      </template>
-    </ul>
+  <iron-media-query query="(min-width: 1024px)" queryMatches="{{queryMatches}}"></iron-media-query>
+  <div class="logic-model layout" vertical?="{{!queryMatches}}" horizontal?="{{queryMatches}}">
+    <logic-outcomes>
+      <paper-header-panel mode="cover">  
+          <paper-toolbar class="blue">                 
+            <div class="top layout horizontal">
+              <h2 class="paper-font-headline title">Outcomes</h2>
+            </div>
+            <div class="flex bottom layout horizontal">
+              <span class="flex"></span>
+              <paper-button>Guide</paper-button>
+              <paper-fab icon="add" mini></paper-fab>              
+            </div>
+          </paper-toolbar>
+          <div class="content">
+            <paper-item>
+              <paper-item-body two-line>
+                <div>Show your status</div>
+                <div secondary>Your status is visible to everyone</div>
+              </paper-item-body>
+            </paper-item>
+            <paper-item>
+              <paper-item-body two-line>
+                <div>Show your status</div>
+                <div secondary>Your status is visible to everyone</div>
+              </paper-item-body>
+            </paper-item>
+          </div>
+      </paper-header-panel>
+    </logic-outcomes>
+    
+    <logic-outputs>
+      <paper-header-panel mode="cover">  
+        <paper-toolbar class="blue">                 
+          <div class="top layout horizontal">
+            <h2 class="paper-font-headline title">Outputs</h2>
+          </div>
+          <div class="flex bottom layout horizontal">
+            <span class="flex"></span>
+            <paper-button>Guide</paper-button>
+            <paper-fab icon="add" mini></paper-fab>              
+          </div>
+        </paper-toolbar>
+        <div class="content">
+          <paper-item>
+            <paper-item-body two-line>
+              <div>Show your status</div>
+              <div secondary>Your status is visible to everyone</div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item>
+            <paper-item-body two-line>
+              <div>Show your status</div>
+              <div secondary>Your status is visible to everyone</div>
+            </paper-item-body>
+          </paper-item>
+        </div>
+      </paper-header-panel>
+    </logic-outputs>
+    
+    <logic-activities>
+      <paper-header-panel mode="cover">  
+        <paper-toolbar class="blue">                 
+          <div class="top layout horizontal">
+            <h2 class="paper-font-headline title">Activities</h2>
+          </div>
+          <div class="flex bottom layout horizontal">
+            <span class="flex"></span>
+            <paper-button>Guide</paper-button>
+            <paper-fab icon="add" mini></paper-fab>              
+          </div>
+        </paper-toolbar>
+        <div class="content">
+          <paper-item>
+            <paper-item-body two-line>
+              <div>Show your status</div>
+              <div secondary>Your status is visible to everyone</div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item>
+            <paper-item-body two-line>
+              <div>Show your status</div>
+              <div secondary>Your status is visible to everyone</div>
+            </paper-item-body>
+          </paper-item>
+        </div>
+      </paper-header-panel>
+    </logic-activities>
+    
+    <logic-inputs>
+      <paper-header-panel mode="cover">  
+        <paper-toolbar class="blue">                 
+          <div class="top layout horizontal">
+            <h2 class="paper-font-headline title">Inputs</h2>
+          </div>
+          <div class="flex bottom layout horizontal">
+            <span class="flex"></span>
+            <paper-button>Guide</paper-button>
+            <paper-fab icon="add" mini></paper-fab>              
+          </div>
+        </paper-toolbar>
+        <div class="content">
+          <paper-item>
+            <paper-item-body two-line>
+              <div>Show your status</div>
+              <div secondary>Your status is visible to everyone</div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item>
+            <paper-item-body two-line>
+              <div>Show your status</div>
+              <div secondary>Your status is visible to everyone</div>
+            </paper-item-body>
+          </paper-item>
+        </div>
+      </paper-header-panel>
+    </logic-inputs>
+  </div>
   </template>
 
   <script>
@@ -36,14 +169,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           }
         },
         ready: function() {
-          this.items = [
-            'Responsive Web App boilerplate',
-            'Iron Elements and Paper Elements',
-            'End-to-end Build Tooling (including Vulcanize)',
-            'Unit testing with Web Component Tester',
-            'Routing with Page.js',
-            'Offline support with the Platinum Service Worker Elements'
-          ];
+
         }
       });
     })();
