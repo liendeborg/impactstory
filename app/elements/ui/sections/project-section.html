@@ -1,0 +1,86 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../my-greeting/my-greeting.html">
+<link rel="import" href="../../my-list/my-list.html">
+<link rel="import" href="../../../bower_components/paper-material/paper-material.html">
+<link rel="import" href="../../../styles/element-theme.html">
+
+<dom-module id="project-section">
+  <template>
+    <style>
+      
+      :host {
+        display: block;
+      }
+    </style>
+    <style is="custom-style" include="element-theme"></style>
+      <paper-material elevation="1" class="fullbleed vertical layout logic-model">
+        <logic-model></logic-model>
+      </paper-material>
+      
+      <paper-material elevation="1" class="fullbleed horizontal layout">
+        <h2 class="paper-font-headline">Visibility and publicity</h2>
+        <p class="paper-font-body1">Project data is visible to everyone.</p>
+      </paper-material>
+      
+      <paper-material elevation="1">
+        <h2 class="paper-font-headline">Mission Statement</h2>
+      </paper-material>
+      
+      <paper-material elevation="1">
+        <h2 class="paper-font-headline">Logic Model</h2>                
+      </paper-material>
+      
+      <paper-material elevation="1">
+        <h2 class="paper-font-headline">Report</h2>
+      </paper-material>
+      
+      <paper-material elevation="1">
+          <div class="toolbar">
+            Title
+          </div>
+          <div class="item">
+            <div class="fab">+</div>
+            <div class="primary">Primary text</div>
+            <div class="secondary">Secondary text</div>
+          </div>
+          <div class="disabled-item">
+            Disabled
+          </div>
+      </paper-material>
+      
+      <div class="horizontal-section-container">                
+        <section class="mobile-app">
+          <div class="toolbar">
+            Title
+          </div>
+          <div class="item">
+            <div class="fab">+</div>
+            <div class="primary">Primary text</div>
+            <div class="secondary">Secondary text</div>
+          </div>
+          <div class="disabled-item">
+            Disabled
+          </div>
+        </section>
+      </div>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+  
+      Polymer({
+        is: 'project-section'
+      });
+    })();
+  </script>
+</dom-module>
